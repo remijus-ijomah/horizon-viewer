@@ -2,7 +2,9 @@ import CameraControls from "../camera/CameraControls";
 import Ground from "../environment/Ground";
 import GroundGrid from "../environment/GroundGrid";
 import SceneLights from "../lighting/SceneLights";
-import VehiclePlaceholder from "../models/VehiclePlaceholder";
+import Vehicle from "../models/vehicle";
+//import VehicleModel from "../models/VehicleModel";
+//import VehiclePlaceholder from "../models/VehiclePlaceholder";
 import Platform from "../platform/Platform";
 
 export default function Scene() {
@@ -15,8 +17,9 @@ export default function Scene() {
       <GroundGrid />
 
       <Platform />
-
-      <VehiclePlaceholder />
+      <Vehicle />
+      {/* <VehiclePlaceholder />  */}
+      {/* <VehicleModel/> */}
 
       <CameraControls />
     </>

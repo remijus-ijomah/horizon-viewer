@@ -1,7 +1,10 @@
+import { Suspense } from "react";
+
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@mui/material";
 
 import Scene from "./Scene";
+import CanvasLoader from "./CanvasLoader";
 
 export default function ViewerCanvas() {
   return (
@@ -16,11 +19,11 @@ export default function ViewerCanvas() {
         camera={{
           position: [5, 3, 7],
           fov: 45,
-          near: 0.1,
-          far: 100,
         }}
       >
-        <Scene />
+        <Suspense fallback={<CanvasLoader />}>
+          <Scene />
+        </Suspense>
       </Canvas>
     </Box>
   );
