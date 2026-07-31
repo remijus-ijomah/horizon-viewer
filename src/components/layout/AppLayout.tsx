@@ -33,7 +33,9 @@ export default function AppLayout({ children }: Props) {
           component="main"
           sx={{
             flex: 1,
+            display: "flex",
             overflow: "hidden",
+            bgcolor: "background.default",
           }}
         >
           {children}

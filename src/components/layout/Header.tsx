@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography, Chip, Box } from "@mui/material";
 
 export default function Header() {
   return (
@@ -12,6 +12,9 @@ export default function Header() {
         >
           Horizon Viewer
         </Typography>
+        <Box sx={{ flexGrow: 1 }} />
+
+        <Chip label="Prototype" color="primary" size="small" />
       </Toolbar>
     </AppBar>
   );

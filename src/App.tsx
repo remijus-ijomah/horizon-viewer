@@ -1,9 +1,10 @@
 import AppLayout from "./components/layout/AppLayout";
+import { ViewerCanvas } from "./features/scene";
 
 function App() {
   return (
     <AppLayout>
-      <div>3D Viewer Area</div>
+      <ViewerCanvas/>
     </AppLayout>
   );
 }
