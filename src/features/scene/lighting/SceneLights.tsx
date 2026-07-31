@@ -1,9 +1,19 @@
 export default function SceneLights() {
   return (
     <>
-      <ambientLight intensity={0.6} />
+      <>
+        <ambientLight intensity={0.35} />
 
-      <directionalLight position={[5, 5, 5]} intensity={2} castShadow />
+        <directionalLight
+          castShadow
+          position={[8, 10, 5]}
+          intensity={2}
+          shadow-mapSize-width={2048}
+          shadow-mapSize-height={2048}
+        />
+
+        <hemisphereLight intensity={0.5} />
+      </>
     </>
   );
 }

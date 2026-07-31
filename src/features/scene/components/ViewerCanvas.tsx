@@ -11,7 +11,15 @@ export default function ViewerCanvas() {
         height: "100%",
       }}
     >
-      <Canvas shadows>
+      <Canvas
+        shadows
+        camera={{
+          position: [5, 3, 7],
+          fov: 45,
+          near: 0.1,
+          far: 100,
+        }}
+      >
         <Scene />
       </Canvas>
     </Box>
