@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import { Mesh } from "three";
 import { useFrame } from "@react-three/fiber";
+import { useViewerStore } from "../../view-inspector/store/viewStore";
 
 export default function VehiclePlaceholder() {
   const ref = useRef<Mesh>(null);
-
+  const wireframe = useViewerStore((state) => state.wireframe);
   useFrame(({ clock }) => {
     if (!ref.current) return;
 
@@ -17,7 +18,12 @@ export default function VehiclePlaceholder() {
     <mesh ref={ref} castShadow>
       <boxGeometry args={[1, 1, 1]} />
 
-      <meshStandardMaterial color="#1565C0" metalness={0.6} roughness={0.35} />
+      <meshStandardMaterial
+        color="#1565C0"
+        metalness={0.6}
+        roughness={0.35}
+        wireframe={wireframe}
+      />
     </mesh>
   );
 }
