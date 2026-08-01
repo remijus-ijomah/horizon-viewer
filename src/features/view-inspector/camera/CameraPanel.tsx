@@ -1,8 +1,7 @@
 import { Button, FormControlLabel, Switch, Stack } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import { useViewerStore } from "../store/viewStore";
+import { useViewerStore } from "../../view-state/viewStore";
 import InspectorPanel from "../../../components/ui/InspectorPanel";
-
 
 export default function CameraPanel() {
   const autoRotate = useViewerStore((state) => state.autoRotate);

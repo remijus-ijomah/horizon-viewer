@@ -1,9 +1,9 @@
 export default function Platform() {
   return (
-    <mesh receiveShadow position={[0, -0.5, 0]}>
-      <cylinderGeometry args={[2.4, 2.4, 0.2, 64]} />
+    <mesh receiveShadow castShadow position={[0, -0.5, 0]}>
+      <cylinderGeometry args={[3.2, 3.2, 0.25, 96]} />
 
-      <meshStandardMaterial color="#20262F" metalness={0.3} roughness={0.8} />
+      <meshStandardMaterial color="#25282e" metalness={0.05} roughness={0.65} />
     </mesh>
   );
 }

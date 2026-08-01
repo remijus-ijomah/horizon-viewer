@@ -1,23 +1,32 @@
-import { useViewerStore } from "../../view-inspector/store/viewStore";
+import { useViewerStore } from "../../view-state/viewStore";
 
 export default function SceneLights() {
-  const intensity = useViewerStore((state) => state.lightingIntensity);
+  const lightingIntensity = useViewerStore((state) => state.lightingIntensity);
 
   const showShadows = useViewerStore((state) => state.showShadows);
 
   return (
     <>
-      <ambientLight intensity={0.35} />
+      {/* Ambient light */}
+      <ambientLight intensity={0.3} />
 
+      {/* Key light */}
       <directionalLight
-        position={[8, 10, 5]}
-        intensity={intensity}
+        position={[6, 8, 5]}
+        intensity={lightingIntensity}
         castShadow={showShadows}
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
       />
 
-      <hemisphereLight intensity={0.5} />
+      {/* Fill light */}
+      <directionalLight position={[-6, 4, -3]} intensity={0.6} />
+
+      {/* Rim light */}
+      <directionalLight position={[0, 6, -8]} intensity={0.5} />
+
+      {/* Sky contribution */}
+      <hemisphereLight args={["#ffffff", "#404040", 0.35]} />
     </>
   );
 }

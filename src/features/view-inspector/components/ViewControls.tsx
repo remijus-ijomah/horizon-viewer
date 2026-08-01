@@ -5,7 +5,7 @@ import {
   Switch,
   FormControlLabel,
 } from "@mui/material";
-import { useViewerStore } from "../store/viewStore";
+import { useViewerStore } from "../../view-state/viewStore";
 
 export default function ViewerControls() {
   const autoRotate = useViewerStore((state) => state.autoRotate);

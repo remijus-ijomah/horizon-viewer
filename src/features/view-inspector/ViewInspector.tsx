@@ -2,7 +2,9 @@ import { Divider } from "@mui/material";
 import { CameraPanel } from "./camera";
 import { LightingPanel } from "./lighting";
 import { MaterialPanel } from "./material";
-import { ScenePanel } from "./scene";
+import ScenePanel from "./scene/ScenePanel";
+
+
 
 export default function ViewerInspector() {
   return (

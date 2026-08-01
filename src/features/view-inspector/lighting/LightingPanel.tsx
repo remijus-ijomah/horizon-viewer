@@ -1,6 +1,6 @@
 import { Slider, Stack, Typography } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { useViewerStore } from "../store/viewStore";
+import { useViewerStore } from "../../view-state/viewStore";
 import InspectorPanel from "../../../components/ui/InspectorPanel";
 
 export default function LightingPanel() {

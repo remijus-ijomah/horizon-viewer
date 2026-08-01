@@ -1,8 +1,7 @@
 import { OrbitControls } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
-import { useViewerStore } from "../../view-inspector/store/viewStore";
-
+import { useViewerStore } from "../../view-state/viewStore";
 
 export default function CameraControls() {
   const controlsRef = useRef<OrbitControlsImpl>(null);
@@ -21,7 +20,10 @@ export default function CameraControls() {
       makeDefault
       enableDamping
       autoRotate={autoRotate}
-      autoRotateSpeed={1}
+      minDistance={3}
+      maxDistance={10}
+      minPolarAngle={Math.PI / 4}
+      maxPolarAngle={Math.PI / 2}
     />
   );
 }

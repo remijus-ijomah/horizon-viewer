@@ -1,8 +1,7 @@
 import { FormControlLabel, Stack, Switch } from "@mui/material";
-import ViewInArIcon from "@mui/icons-material/ViewInAr";
-import InspectorPanel from "../../../components/ui/InspectorPanel";
-import { useViewerStore } from "../store/viewStore";
 
+import InspectorPanel from "../../../components/ui/InspectorPanel";
+import { useViewerStore } from "../../view-state/viewStore";
 
 export default function ScenePanel() {
   const showGrid = useViewerStore((state) => state.showGrid);
@@ -14,7 +13,7 @@ export default function ScenePanel() {
   const toggleShadows = useViewerStore((state) => state.toggleShadows);
 
   return (
-    <InspectorPanel title="Scene" icon={<ViewInArIcon fontSize="small" />}>
+    <InspectorPanel title="Scene">
       <Stack spacing={2}>
         <FormControlLabel
           control={<Switch checked={showGrid} onChange={toggleGrid} />}
