@@ -19,7 +19,7 @@ export default function StatusBar() {
       }}
     >
       <Typography variant="caption" color="text.secondary">
-        FPS: -- | Objects: -- | Camera: --
+        Horizon Viewer • React • Three.js • React Three Fiber • TypeScript
       </Typography>
     </Box>
   );

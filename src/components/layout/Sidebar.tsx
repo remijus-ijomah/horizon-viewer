@@ -11,8 +11,23 @@ export default function Sidebar() {
           xs: "100%",
           md: 320,
         },
-        height: "100%",
-        borderRight: 1,
+        height: {
+          xs: "auto",
+          md: "100%",
+        },
+        maxHeight: {
+          xs: "40vh",
+          md: "100%",
+        },
+        flexShrink: 0,
+        borderRight: {
+          xs: 0,
+          md: 1,
+        },
+        borderBottom: {
+          xs: 1,
+          md: 0,
+        },
         borderColor: "divider",
         display: "flex",
         flexDirection: "column",

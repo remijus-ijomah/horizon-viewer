@@ -14,7 +14,8 @@ export default function AppLayout({ children }: Props) {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
+        minHeight: "100dvh",
+        height: "100dvh",
         overflow: "hidden",
       }}
     >
@@ -24,6 +25,10 @@ export default function AppLayout({ children }: Props) {
         sx={{
           display: "flex",
           flex: 1,
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
           overflow: "hidden",
         }}
       >
@@ -36,6 +41,11 @@ export default function AppLayout({ children }: Props) {
             display: "flex",
             overflow: "hidden",
             bgcolor: "background.default",
+            minHeight: {
+              xs: "60vh",
+              md: 0,
+            },
+            minWidth: 0,
           }}
         >
           {children}
