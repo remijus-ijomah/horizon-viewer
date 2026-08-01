@@ -14,7 +14,7 @@ export default function Header() {
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
 
-        <Chip label="Prototype" color="primary" size="small" />
+        <Chip label="3D Vehicle Viewer" color="primary" size="small" />
       </Toolbar>
     </AppBar>
   );

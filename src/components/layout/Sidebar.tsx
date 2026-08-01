@@ -1,48 +1,49 @@
 import { Box, Divider, Typography } from "@mui/material";
+import { ViewerInspector } from "../../features/view-inspector";
+
+
 
 export default function Sidebar() {
   return (
     <Box
       sx={{
-        width: 280,
-        backgroundColor: "background.paper",
-
-        borderRight: "1px solid",
-
+        width: {
+          xs: "100%",
+          md: 320,
+        },
+        height: "100%",
+        borderRight: 1,
         borderColor: "divider",
-
-        p: 2,
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <Typography variant="subtitle1" fontWeight={600}>
-        Controls
-      </Typography>
-
-      <Divider
+      <Box
         sx={{
-          my: 2,
-        }}
-      />
-
-      <Typography color="text.secondary">Camera</Typography>
-
-      <Typography
-        color="text.secondary"
-        sx={{
-          mt: 2,
+          px: 2,
+          py: 1.5,
         }}
       >
-        Lighting
-      </Typography>
+        <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
+          Viewer Inspector
+        </Typography>
 
-      <Typography
-        color="text.secondary"
+        <Typography variant="caption" color="text.secondary">
+          Scene configuration
+        </Typography>
+      </Box>
+
+      <Divider />
+
+      <Box
         sx={{
-          mt: 2,
+          flex: 1,
+          overflowY: "auto",
+          p: 2,
         }}
       >
-        Materials
-      </Typography>
+        <ViewerInspector />
+      </Box>
     </Box>
   );
 }
